@@ -2,6 +2,7 @@ import mongoose from "mongoose"
 import db from "./db.js"
 
 const volanteSchema = mongoose.Schema({
+    idUsuario: String,
     tipoAnimal: String,
     url_imagen: String,
     descripción: String,
@@ -11,7 +12,16 @@ const volanteSchema = mongoose.Schema({
 
 const VolanteModel = mongoose.model('volantes', volanteSchema)
 
-
+/*
+{
+    "idUsuario": "as3432",
+    "tipoAnimal": "Gato",
+    "url_imagen": "./img/perros5.jfif",
+    "descripción": "Se perdió el 5 de agosto por la noche, llevaba un collar azul",
+    "ubicacion": "Barracas",
+    "telefono": "11234256234"
+}
+*/
 // ------------- CRUD hacia MongoDB -----------------
 async function readAll() {
     try {

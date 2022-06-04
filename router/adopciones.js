@@ -1,7 +1,7 @@
 import express from 'express'
 const router = express.Router()
 
-import controlador from '../controlador/productos.js'
+import controlador from '../controlador/adopciones.js'
 
 router.get('/:id?', controlador.obtener)
 
