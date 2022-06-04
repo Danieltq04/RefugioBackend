@@ -1,6 +1,6 @@
 import express from 'express'
-import routerProductos from './router/productos.js'
 import routerVolantes from './router/volantes.js'
+import routerAdopciones from './router/adopciones.js'
 import db from './model/db.js'
 import cors from 'cors'
 
@@ -29,8 +29,8 @@ app.get('/ping', (req,res) => {
 })
 
 
-app.use('/api/productos', routerProductos)
 app.use('/api/volantes', routerVolantes)
+app.use('/api/adopciones', routerAdopciones)
 
 
 const PORT = process.env.PORT || 8080   //Short Circuit Operator
